@@ -1,0 +1,59 @@
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+.landing-hero {
+  max-width: 800px;
+}
+
+.landing-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #495057;
+  margin-bottom: 2rem;
+}
+
+.features-preview {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  background-color: #e9ecef;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #343a40;
+}
+
+.get-started-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.get-started-btn:hover {
+  background-color: var(--primary-hover-color);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,70 @@
+/* Main navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(45, 55, 72, 0.85); /* Dark slate with transparency */
+  backdrop-filter: blur(10px); /* The "Glassmorphism" effect */
+  padding: 1rem 2.5rem;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand/Logo styling */
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+/* Container for the navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for all links AND the logout button */
+.nav-links .nav-link {
+  /* Reset button styles to look like text */
+  background: none;
+  border: none;
+  font-family: inherit;
+  
+  /* Consistent styling */
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  
+  /* Spacing */
+  margin-left: 2rem;
+  
+  /* Setup for animation */
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Elegant underline animation on hover */
+.nav-links .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-links .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

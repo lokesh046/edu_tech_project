@@ -1,0 +1,37 @@
+:root {
+  --primary-color: #007bff;
+  --primary-hover-color: #0056b3;
+  --dark-color: #212529;
+  --body-text-color: #495057;
+  --background-color: #f8f9fa;
+  --card-background-color: #ffffff;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --light-gray-color: #e9ecef;
+  --border-color: #dee2e6;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --card-hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--body-text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}

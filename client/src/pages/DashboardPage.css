@@ -1,0 +1,188 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background-color: var(--card-background-color);
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: var(--card-shadow);
+}
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.dashboard-header p {
+  font-size: 1.2rem;
+  color: var(--body-text-color);
+}
+
+.about-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: #eef7ff;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 8px;
+}
+.about-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.about-section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.widget {
+  background: var(--card-background-color);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.widget h2 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.widget-empty-state {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #6c757d;
+  padding: 1rem;
+}
+
+.widget-view-all {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-weight: 600;
+  text-align: right;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.widget-view-all:hover {
+  color: var(--primary-hover-color);
+}
+
+.progress-item, .note-item, .discussion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.progress-item:hover, .note-item:hover, .discussion-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+.progress-item:last-child, .note-item:last-child, .discussion-item:last-child {
+  border-bottom: none;
+}
+
+.course-title, .note-title, .discussion-title {
+  font-weight: 500;
+  color: var(--dark-color);
+}
+.topic-count, .note-date, .discussion-author {
+  font-size: 0.9rem;
+  color: #6c757d;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.achievements-widget .badges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-content: flex-start;
+  flex-grow: 1;
+}
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  padding: 0.5rem;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: help;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.badge-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-hover-shadow);
+}
+.badge-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+.badge-title {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.contact-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+.contact-footer h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+.contact-footer p { font-size: 1.1rem; color: var(--body-text-color); margin-bottom: 1rem; }
+.contact-footer a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.2s;
+}
+.contact-footer a:hover {
+  color: var(--primary-hover-color);
+  text-decoration: underline;
+}
+
+.loading-container, .error-container {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+}
+.error-container {
+  color: var(--error-color);
+}

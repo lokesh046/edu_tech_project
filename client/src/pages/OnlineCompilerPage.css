@@ -1,0 +1,104 @@
+.compiler-page-container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.compiler-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.language-selector-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-selector-wrapper label {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.language-selector-wrapper select {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--card-background-color);
+  cursor: pointer;
+}
+
+.compiler-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  height: 65vh;
+}
+
+@media (min-width: 768px) {
+  .compiler-layout {
+    grid-template-columns: 60% 1fr;
+  }
+}
+
+.editor-panel,
+.output-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-wrapper {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  flex-grow: 1;
+  overflow: auto;
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+}
+
+.run-button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--success-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.run-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+.run-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: translateY(0);
+}
+
+.output-panel h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.output-content {
+  background-color: var(--dark-color);
+  color: #f8f8f2;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  flex-grow: 1;
+  font-family: '"Fira code", "Fira Mono", monospace';
+  font-size: 0.9rem;
+  overflow: auto;
+}
